@@ -65,6 +65,48 @@ The system uses a multi-agent workflow where each agent performs a specific oper
 Incident Input → Intake Agent → Retrieval Agent → Hypothesis Agent → Action Agent → Review Agent → Final Incident Brief
 
 
+## Example Output
+
+Incident Summary
+Production API latency spike following recent deployment affecting claims submission service.
+
+Likely Root Causes
+1. Recent deployment introduced inefficient database queries.
+2. Database connection pool exhaustion.
+3. Upstream dependency latency causing cascading slowdowns.
+
+Immediate Triage Steps
+1. Review deployment logs and release notes.
+2. Check database connection pool metrics.
+3. Compare latency metrics before and after deployment.
+4. Consider rollback if deployment correlates with the issue.
+
+Escalation Guidance
+Notify application owner and incident commander if latency persists beyond SLA thresholds.
+
+Assumptions and Confidence
+Moderate confidence based on runbook guidance and incident pattern matching.
+
+## Key Concepts Demonstrated
+
+- Agent-based workflow orchestration
+- Retrieval-augmented reasoning using operational runbooks
+- Multi-agent task specialization
+- Structured AI-assisted incident triage
+- Practical AI use cases for cloud operations and DevSecOps environments
+
+- ## Demo
+
+Example terminal session:
+
+$ python app.py
+
+Enter incident description:
+Production API latency spike affecting claims service
+
+--- Final Incident Brief ---
+[generated response]
+
 ## Project Structure
 
 ```text
