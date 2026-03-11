@@ -18,7 +18,7 @@ I built this project to demonstrate practical **agent-based workflow design** fo
 
 ## Agent Workflow
 
-Incident Input → Intake Agent → Retrieval Agent → Hypothesis Agent → Action Agent → Review Agent
+Incident Input → Intake Agent → Retrieval Agent → Hypothesis Agent → Action Planning Agent → Review Agent → Confidence & Escalation Agent → Final Incident Brief
 
 ### 1. Intake Agent
 Parses the incident and identifies likely severity, service impact, and incident category.
