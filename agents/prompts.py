@@ -76,3 +76,25 @@ Return a polished final incident brief in markdown with these sections:
 4. Escalation Guidance
 5. Assumptions and Confidence
 """
+
+CONFIDENCE_PROMPT = """
+You are a Confidence and Escalation Agent.
+
+Your role is to evaluate the final incident response brief.
+
+Determine:
+
+1. Confidence level (Low, Medium, High)
+2. Whether immediate human escalation is recommended
+3. Key risks if the recommendations are incorrect
+
+Return:
+
+Confidence Level:
+Escalation Recommendation:
+Risk Notes:
+
+Be conservative and prioritize operational safety.
+"""
+
+
