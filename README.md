@@ -68,24 +68,34 @@ Incident Input → Intake Agent → Retrieval Agent → Hypothesis Agent → Act
 ## Example Output
 
 Incident Summary
-Production API latency spike following recent deployment affecting claims submission service.
+Production API latency spike following recent deployment.
 
 Likely Root Causes
-1. Recent deployment introduced inefficient database queries.
-2. Database connection pool exhaustion.
-3. Upstream dependency latency causing cascading slowdowns.
+1. Inefficient database queries introduced in deployment
+2. Database connection pool exhaustion
+3. Upstream dependency slowdown
 
 Immediate Triage Steps
-1. Review deployment logs and release notes.
-2. Check database connection pool metrics.
-3. Compare latency metrics before and after deployment.
-4. Consider rollback if deployment correlates with the issue.
+1. Review deployment logs
+2. Check database connection metrics
+3. Compare pre/post deployment latency
+4. Consider rollback
 
 Escalation Guidance
-Notify application owner and incident commander if latency persists beyond SLA thresholds.
+Notify application owner if latency exceeds SLA thresholds.
 
 Assumptions and Confidence
-Moderate confidence based on runbook guidance and incident pattern matching.
+Moderate confidence based on runbook guidance.
+
+---
+
+Confidence Level: Medium
+
+Escalation Recommendation:
+Notify incident commander if customer impact continues beyond 15 minutes.
+
+Risk Notes:
+Automated triage recommendations may not detect external dependency failures.
 
 ## Key Concepts Demonstrated
 
