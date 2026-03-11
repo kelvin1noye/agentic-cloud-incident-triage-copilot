@@ -57,24 +57,6 @@ A structured incident brief with:
 - Markdown-based local runbooks
 - Multi-agent workflow design
 
-## Project Structure
-
-```text
-cloud-incident-triage-copilot/
-├── app.py
-├── requirements.txt
-├── .env.example
-├── .gitignore
-├── README.md
-├── data/
-│   └── runbooks/
-│       ├── api_latency.md
-│       ├── database_connectivity.md
-│       └── deployment_rollback.md
-└── agents/
-    ├── __init__.py
-    ├── prompts.py
-    └── workflow.py
 
 ## Architecture
 
@@ -98,3 +80,25 @@ Review Agent
       │
       ▼
 Final Incident Brief
+
+
+## Project Structure
+
+```text
+cloud-incident-triage-copilot/
+├── app.py
+├── requirements.txt
+├── .env.example
+├── .gitignore
+├── README.md
+├── data/
+│   └── runbooks/
+│       ├── api_latency.md
+│       ├── database_connectivity.md
+│       └── deployment_rollback.md
+└── agents/
+    ├── __init__.py
+    ├── prompts.py
+    └── workflow.py
+
+
