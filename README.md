@@ -61,25 +61,8 @@ A structured incident brief with:
 ## Architecture
 
 The system uses a multi-agent workflow where each agent performs a specific operational task before passing structured output to the next stage.
-Incident Input
-      │
-      ▼
-Intake Agent
-      │
-      ▼
-Retrieval Agent ───► Runbook Knowledge Base
-      │
-      ▼
-Hypothesis Agent
-      │
-      ▼
-Action Planning Agent
-      │
-      ▼
-Review Agent
-      │
-      ▼
-Final Incident Brief
+
+Incident Input → Intake Agent → Retrieval Agent → Hypothesis Agent → Action Agent → Review Agent → Final Incident Brief
 
 
 ## Project Structure
