@@ -137,3 +137,16 @@ def run_workflow(incident_text: str) -> IncidentState:
     state = action_agent(state)
     state = review_agent(state)
     return state
+
+from agents.prompts import CONFIDENCE_PROMPT
+
+def confidence_agent(state: IncidentState) -> IncidentState:
+    prompt = f"""
+Evaluate the following incident response brief:
+
+{state['final_output']}
+"""
+    output = call_llm(CONFIDENCE_PROMPT, prompt)
+
+    state["final_output"] = state["final_output"] + "\n\n---\n\n" + output
+    return state
