@@ -16,24 +16,71 @@ This project simulates an AI-assisted incident triage workflow for cloud environ
 
 I built this project to demonstrate practical **agent-based workflow design** for cloud operations and DevSecOps environments. The goal was to create a simple but credible example of how AI agents can support incident-response decision making through structured task handoffs.
 
-## Agent Workflow
 
-Incident Input → Intake Agent → Retrieval Agent → Hypothesis Agent → Action Planning Agent → Review Agent → Confidence & Escalation Agent → Final Incident Brief
+---
 
-### 1. Intake Agent
-Parses the incident and identifies likely severity, service impact, and incident category.
+# Agent Roles
 
-### 2. Retrieval Agent
-Pulls relevant operational context from local runbooks.
+## Intake Agent
+Analyzes the incoming incident description and extracts:
 
-### 3. Hypothesis Agent
-Generates likely root-cause hypotheses and identifies what evidence would confirm or weaken each one.
+- incident summary
+- affected service
+- probable incident category
+- estimated severity
+- potential business impact
 
-### 4. Action Planning Agent
-Produces recommended triage steps, rollback considerations, and escalation guidance.
+---
 
-### 5. Review Agent
-Reviews the full draft for clarity, duplication, and unsafe or overly speculative guidance before producing the final incident brief.
+## Retrieval Agent
+Searches the runbook knowledge base and retrieves relevant operational guidance related to the incident.
+
+---
+
+## Hypothesis Agent
+Generates several **likely root-cause hypotheses** and identifies:
+
+- why each hypothesis is plausible
+- what evidence would confirm it
+- what evidence would weaken it
+
+---
+
+## Action Planning Agent
+Creates a recommended triage plan including:
+
+- priority diagnostic checks
+- rollback considerations
+- escalation triggers
+- operational risks
+
+---
+
+## Review Agent
+Validates the draft response and improves:
+
+- clarity
+- structure
+- operational safety
+- removal of speculative or redundant guidance
+
+---
+
+## Confidence & Escalation Agent
+Evaluates the final incident brief and determines:
+
+- overall confidence level
+- whether escalation to human responders is recommended
+- risks associated with incorrect remediation
+
+This agent simulates **AI governance patterns used in enterprise AI systems**.
+
+---
+
+# Example Use Case
+
+### Input
+
 
 ## Example Use Case
 
