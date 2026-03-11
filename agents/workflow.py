@@ -127,15 +127,13 @@ Draft action plan:
 
 
 def run_workflow(incident_text: str) -> IncidentState:
-    """
-    Run the full multi-agent incident triage workflow.
-    """
     state: IncidentState = {"incident_text": incident_text}
     state = intake_agent(state)
     state = retrieval_agent(state)
     state = hypothesis_agent(state)
     state = action_agent(state)
     state = review_agent(state)
+    state = confidence_agent(state)
     return state
 
 from agents.prompts import CONFIDENCE_PROMPT
